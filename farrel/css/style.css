@@ -1,0 +1,242 @@
+:root {
+  --ink: #21002f;
+  --cream: #fffdf2;
+  --yellow: #ffe600;
+  --win: #c0c0c0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Comic Sans MS", "Comic Sans", "Trebuchet MS", cursive;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  background-image: url(../assets/awas-ada-miaw.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+::selection {
+  background: var(--yellow);
+  color: #000;
+}
+
+a {
+  color: #0000ee;
+}
+
+a:hover {
+  color: var(--hot);
+  background: #fff3a0;
+}
+
+a:focus-visible {
+  outline: 3px dotted var(--hot);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.page-wrap {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  padding: 6px;
+}
+
+.layout {
+  width: min(100%, 900px);
+  max-height: 100%;
+  padding: 6px;
+}
+
+.sidebar,
+.main-col {
+  vertical-align: top;
+}
+
+.sidebar {
+  width: 236px;
+}
+
+.win {
+  margin-bottom: 10px;
+  padding: 3px;
+  background: var(--win);
+  border: 2px outset #f7f7f7;
+}
+
+.win-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 5px;
+  color: #fff;
+  font-family: Tahoma, "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  background: linear-gradient(90deg, #000080, #1084d0);
+}
+
+.win-title > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.win-buttons {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.win-buttons span {
+  display: grid;
+  place-items: center;
+  width: 15px;
+  height: 13px;
+  color: #000;
+  font-family: "MS Sans Serif", Tahoma, Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1;
+  background: var(--win);
+  border: 1px outset #fff;
+}
+
+.win-body {
+  padding: 12px 14px;
+  background-color: var(--cream);
+  border-top: 2px solid #808080;
+}
+
+.win-body p {
+  margin: 0 0 10px;
+}
+
+.panel-heading {
+  margin: 0 0 10px;
+  padding-bottom: 4px;
+  color: black;
+  font-size: 19px;
+  border-bottom: 3px double blue;
+}
+
+.profile-frame {
+  margin: 2px auto 12px;
+  padding: 6px 6px 4px;
+  background: #fff;
+  border: 1px solid #000;
+  transform: rotate(-1.5deg);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #fff;
+  object-position: top;
+}
+
+.photo-caption {
+  padding-top: 4px;
+  color: #444;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 11px;
+  text-align: center;
+}
+
+.side-list {
+  margin: 0;
+  padding-left: 4px;
+  font-size: 13px;
+  list-style: none;
+}
+
+.side-list li {
+  margin-bottom: 4px;
+}
+
+.activity-frame {
+  max-width: 330px;
+  margin: 14px auto 10px;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #000;
+  transform: rotate(1deg);
+}
+
+.activity-photo {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.activity-frame figcaption {
+  padding-top: 5px;
+  color: #444;
+  font-size: 11px;
+  text-align: center;
+}
+
+.btn98 {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 5px;
+  color: #000;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  background: var(--win);
+  border: 2px outset #fff;
+  cursor: pointer;
+}
+.btn98:active {
+  border-style: inset;
+}
+
+/* --- Modal stlyes --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  width: 280px;
+  margin: 0;
+}
+.modal-box .btn98 {
+  display: inline-block;
+  width: auto;
+  padding: 4px 20px;
+  margin-top: 0;
+}
