@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+	--col0: #202020;
+	--col1: #AC4142;
+	--col2: #90A959;
+	--col3: #F4BF75;
+	--col4: #6A9FB5;
+	--col5: #AA759F;
+	--col6: #75B5AA;
+	--col7: #D0D0D0;
+	--col8: #404040;
+	--col9: #AC4142;
+	--col10: #90A959;
+	--col11: #F4BF75;
+	--col12: #6A9FB5;
+	--col13: #AA759F;
+	--col14: #75B5AA;
+	--col15: #F5F5F5;
+}
+
+body {
+	font-family: "JetBrains Mono", monospace;
+	font-size: 2em;
+	background-color: var(--col0);
+	color: var(--col7);
+}
+
+.terminal {
+    border: 2px solid #555;
+    border-radius: 16px;
+    margin: 12px;
+    min-height: calc(100vh - 28px);
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.terminal-line {
+	white-space: pre;
+}
+
+.cursor {
+	animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+	to {
+		visibility: hidden;
+	}
+}
+
+.img-wrapper {
+	display: flex;
+}
+
+.img-wrapper > img {
+	margin-right: 0.5em;
+}
